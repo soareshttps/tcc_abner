@@ -20,7 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "Todos os Campos São Obrigatórios";
     }
 
-    $sql = "INSERT INTO torcedor (nome, cpf, email, senha) 
+    $sql = "INSERT INTO torcedor (nome, cpf, email, senha)
     
     VALUES ('$nome', '$cpf', '$email', '$senha')";
 

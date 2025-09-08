@@ -1,13 +1,25 @@
 <?php
-$servername = "conexao";
-$username = "root";
-$password = "";
-$dbname = "VolleyConnect";
 
-// Criar conexão
-$conn = new mysqli($servername, $username, $password, $dbname);
+function conecta() : mysqli
+{
+    $servidor = 'localhost';
+    $banco = 'volleyconnect';
+    $port = 3308;
+    $usuario = 'root';
+    $senha = '';
+    $conexao = mysqli_connect($servidor, $usuario, $senha, $banco, $port);
 
-// Verificar conexão
-if ($conn->connect_error) {
-    die("Conexão falhou: " . $conn->connect_error);
+    if(!$conexao)
+    {
+        echo 'Erro: Não foi possível conectar ao MySql.' . PHP_EOL;
+        echo 'Debugging error: ' . mysqli_connect_error() . PHP_EOL;
+        //echo 'Debugging error: ' . mysqli_connect_error() . PHP_EOL;
+    }
+        return $conexao;
 }
+
+function desconecta($conexao)
+{
+    mysqli_close($conexao);
+}
+?>
