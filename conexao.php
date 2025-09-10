@@ -4,7 +4,7 @@ function conecta() : mysqli
 {
     $servidor = 'localhost';
     $banco = 'volleyconnect';
-    $port = 3308;
+    $port = 3306;
     $usuario = 'root';
     $senha = '';
     $conexao = mysqli_connect($servidor, $usuario, $senha, $banco, $port);

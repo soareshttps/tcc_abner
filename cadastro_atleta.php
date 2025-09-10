@@ -1,6 +1,7 @@
 <?php
 include 'conexao.php';
 
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nome=$_POST['nome'] ?? '';
     $cpf=$_POST['cpf'] ?? '';
@@ -31,14 +32,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $sql = "INSERT INTO atleta (nome, cpf, email, senha, time, posicao, genero, idade) 
     
     VALUES ('$nome', '$cpf', '$email', '$senha', '$time', '$posicao', '$genero', '$idade')";
-
-    if (mysqli_query($conn, $sql)) {
+    $conexao = conecta();
+    if (mysqli_query($conexao, $sql)) {
         echo "Novo registro criado com sucesso";
     } else {
-        echo "Erro: " . $sql . "<br>" . mysqli_error($conn);
+        echo "Erro: " . $sql . "<br>" . mysqli_error($conexao);
     }
 
-    mysqli_close($conn);
+    desconecta($conexao);
 }
 ?>
 <div>
