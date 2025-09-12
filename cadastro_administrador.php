@@ -22,17 +22,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "Todos os Campos São Obrigatórios";
     }
 
-    $sql = "INSERT INTO admnistrador (nome, cpf, credencial, email, senha) 
+    $sql = "INSERT INTO administrador (nome, cpf, credencial, email, senha) 
     
     VALUES ('$nome', '$cpf', '$credencial', '$email', '$senha')";
-
-    if (mysqli_query($conn, $sql)) {
+    $conexao = conecta();
+    if (mysqli_query($conexao, $sql)) {
         echo "Novo registro criado com sucesso";
     } else {
         echo "Erro: " . $sql . "<br>" . mysqli_error($conn);
     }
 
-    mysqli_close($conn);
+    desconecta($conexao);
 }
 ?>
 <div>

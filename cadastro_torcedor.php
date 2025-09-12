@@ -23,14 +23,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $sql = "INSERT INTO torcedor (nome, cpf, email, senha)
     
     VALUES ('$nome', '$cpf', '$email', '$senha')";
-
-    if (mysqli_query($conn, $sql)) {
+    $conexao = conecta();
+    if (mysqli_query($conexao, $sql)) {
         echo "Novo registro criado com sucesso";
     } else {
         echo "Erro: " . $sql . "<br>" . mysqli_error($conn);
     }
 
-    mysqli_close($conn);
+    desconecta($conexao);
 }
 ?>
 <div>
