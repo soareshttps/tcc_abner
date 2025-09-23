@@ -1,3 +1,4 @@
+
 <?php
 include 'conexao.php';
 
@@ -37,4 +38,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 ?>
 <div>
     <a href="login.html">Login</a>
+    <link rel="stylesheet" href="style_confirmacao_administrador.css">
 </div>

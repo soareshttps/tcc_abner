@@ -94,7 +94,7 @@ create table encontro
 
 create table assiste
 (
-	id_torcedor int not null auto_increment,
+	id_torcedor int not null,
     id_jogo int not null auto_increment,
     primary key (id_torcedor, id_jogo),
     foreign key (id_torcedor) references torcedor (id),
