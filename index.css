@@ -1,0 +1,228 @@
+/* Estilos Globais */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5; /* Cor de fundo clara para a área principal */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Cabeçalho Principal */
+.main-header {
+    background: linear-gradient(90deg, #0d0b3d, #2a24c9); /* Gradiente de fundo */
+    color: #fff;
+    padding: 15px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 40px; /* Ajuste o tamanho do logo conforme necessário */
+    margin-right: 10px;
+}
+
+.logo span {
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+.main-nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-left: 15px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.main-nav .btn-cadastro {
+    background-color: #4CAF50; /* Verde para Cadastro */
+}
+
+.main-nav .btn-cadastro:hover {
+    background-color: #45a049;
+}
+
+.main-nav .btn-entrar {
+    background-color: #007bff; /* Azul para Entrar */
+}
+
+.main-nav .btn-entrar:hover {
+    background-color: #0056b3;
+}
+
+/* Seção Hero */
+.hero-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #fff;
+    margin-bottom: 20px;
+}
+
+.hero-section h1 {
+    color: #2a24c9; /* Azul escuro */
+    font-size: 32px;
+    font-weight: bold;
+}
+
+/* Seção do Carrossel */
+.carousel-section {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.carousel-container {
+    position: relative;
+    max-width: 900px; /* Largura máxima do carrossel */
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-image {
+    width: 100%;
+    display: block;
+    height: auto;
+}
+
+.carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 24px;
+    border-radius: 50%;
+    z-index: 10;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-arrow:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.left-arrow {
+    left: 10px;
+}
+
+.right-arrow {
+    right: 10px;
+}
+
+/* Navegação Inferior (Footer) */
+.bottom-nav {
+    background: linear-gradient(90deg, #0d0b3d, #2a24c9); /* Mesmo gradiente do cabeçalho */
+    color: #fff;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: auto; /* Empurra o footer para o final da página */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-item i {
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+.nav-item:hover {
+    color: #a1c4fd; /* Cor mais clara no hover */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .main-nav {
+        margin-top: 15px;
+    }
+
+    .main-nav a {
+        margin: 0 5px;
+        padding: 8px 15px;
+    }
+
+    .hero-section h1 {
+        font-size: 26px;
+    }
+
+    .carousel-arrow {
+        padding: 10px;
+        font-size: 20px;
+    }
+
+    .bottom-nav {
+        flex-wrap: wrap;
+        padding: 10px;
+    }
+
+    .nav-item {
+        width: 30%; /* Para alinhar 3 itens por linha */
+        margin: 10px 0;
+    }
+
+    .nav-item i {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo span {
+        font-size: 18px;
+    }
+
+    .main-nav a {
+        display: block;
+        margin: 10px auto;
+        width: 80%;
+    }
+
+    .hero-section h1 {
+        font-size: 22px;
+    }
+
+    .bottom-nav {
+        flex-direction: column;
+    }
+
+    .nav-item {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+

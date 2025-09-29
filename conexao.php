@@ -6,7 +6,7 @@ function conecta() : mysqli
     $banco = 'VolleyConnect';
     $port = 3306;
     $usuario = 'root';
-    $senha = '';
+    $senha = 'ifsp';
     $conexao = mysqli_connect($servidor, $usuario, $senha, $banco, $port);
 
     if(!$conexao)

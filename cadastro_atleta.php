@@ -16,14 +16,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     {
 
         echo "<h1>Cadastro concluido!</h1><br>";
-        echo "Nome: $nome <br>";
-        echo "CPF: $cpf <br>";
-        echo "Email: $email <br>";
-        echo "Senha: $senha <br>";
-        echo "Time: $time <br>";
-        echo "Posição: $posicao <br>";
-        echo "Gênero: $genero <br>";
-        echo "Idade: $idade <br>";
+        // echo "Nome: $nome <br>";
+        // echo "CPF: $cpf <br>";
+        // echo "Email: $email <br>";
+        // echo "Senha: $senha <br>";
+        // echo "Time: $time <br>";
+        // echo "Posição: $posicao <br>";
+        // echo "Gênero: $genero <br>";
+        // echo "Idade: $idade <br>";
 
     } else {
         echo "Todos os Campos São Obrigatórios";
